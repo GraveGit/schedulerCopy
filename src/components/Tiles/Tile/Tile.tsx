@@ -27,6 +27,10 @@ const Tile: FC<TileProps> = ({ row, data, zoom, onTileClick }) => {
 
   const { colors } = useTheme();
 
+  if (width <= 0) {
+    return null;
+  }
+
   return (
     <StyledTileWrapper
       style={{
